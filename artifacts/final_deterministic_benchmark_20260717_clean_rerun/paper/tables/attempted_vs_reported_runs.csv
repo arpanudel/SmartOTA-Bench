@@ -1,0 +1,2 @@
+scope,attempted,reported,completed,timeout,failed_replay,invalid_replay,error,excluded,replay_valid,result_rows_written,result_rows_match_reported,accounting_note
+attempt_ledger_jsonl,1152,1152,1104,0,0,0,48,0,1152,1152,True,Counts are derived from attempt_ledger.jsonl.

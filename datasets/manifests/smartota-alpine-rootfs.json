@@ -1,0 +1,52 @@
+{
+  "name": "smartota-alpine-rootfs",
+  "version": 1,
+  "base_dir": "../..",
+  "pairs": [
+    {
+      "id": "alpine_3_20_to_3_21_rootfs_tar_x86_64",
+      "enabled": true,
+      "domain": "os_rootfs",
+      "tier": "alpine-rootfs",
+      "scenario": "Normalized uncompressed Alpine rootfs tar derived from minirootfs 3.20.0 to 3.21.0 for rootfs-level OTA planning",
+      "artifact_type": "rootfs_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "derivation_normalized_uncompressed_tar",
+      "old_file": "data/processed/alpine-rootfs/alpine-minirootfs-3.20.0-x86_64.rootfs.tar",
+      "new_file": "data/processed/alpine-rootfs/alpine-minirootfs-3.21.0-x86_64.rootfs.tar",
+      "block_size_bytes": 65536,
+      "source": "Derived with scripts/derive_alpine_rootfs_artifacts.py from pinned Alpine minirootfs 3.20.0 and 3.21.0 release artifacts recorded in smartota-alpine-expanded",
+      "license_notes": "Derived from Alpine Linux minirootfs distribution artifacts; package-level licenses and Alpine redistribution terms should be reviewed before publishing mirrored artifacts",
+      "derived_from_manifest": "datasets/manifests/smartota-alpine-expanded.json",
+      "derived_from_pair_id": "alpine_3_20_to_3_21_minirootfs_x86_64",
+      "derivation": {
+        "script": "scripts/derive_alpine_rootfs_artifacts.py",
+        "format": "normalized_uncompressed_tar",
+        "member_order": "path_sorted",
+        "normalized_mtime": 0,
+        "path_validation": "reject absolute, parent-traversal, backslash, and NUL member paths"
+      },
+      "old_size_bytes": 8079360,
+      "old_sha256": "c867ca63fce462dfb7186b090b767d3408ef7414a2774509918ab515beeab14f",
+      "new_size_bytes": 8130560,
+      "new_sha256": "5402fafa1cf0478942fb117ec219a44482b1750dcb3a7df5d59a89ca5a45a242"
+    },
+    {
+      "id": "alpine_3_21_point_release_rootfs_tar_x86_64",
+      "enabled": false,
+      "domain": "os_rootfs",
+      "tier": "alpine-rootfs",
+      "scenario": "normalized uncompressed Alpine rootfs tar for a pinned 3.21.x point release transition",
+      "artifact_type": "rootfs_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "derivation_normalized_uncompressed_tar",
+      "old_file": "data/processed/alpine-rootfs/alpine-minirootfs-3.21.0-x86_64.rootfs.tar",
+      "new_file": "data/processed/alpine-rootfs/alpine-minirootfs-3.21-point-x86_64.rootfs.tar",
+      "block_size_bytes": 65536,
+      "source": "Download a pinned Alpine 3.21.x point release pair, derive normalized rootfs tar artifacts, then register hashes",
+      "license_notes": "Derived from Alpine Linux minirootfs artifacts; record exact upstream version and redistribution terms during registration",
+      "manual_download": true,
+      "manual_derivation": true
+    }
+  ]
+}

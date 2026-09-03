@@ -1,0 +1,27 @@
+{
+  "base_dir": "/home/arpan/OTA/.cursor-tutor/ota_environment",
+  "name": "smartota-container-layers",
+  "pairs": [
+    {
+      "artifact_type": "perception_container_tar",
+      "block_size_bytes": 16384,
+      "compression_status": "uncompressed",
+      "compression_status_source": "deterministic_tar_derivation",
+      "domain": "container_av_perception",
+      "enabled": true,
+      "generator": "scripts/build_container_yolo_artifacts.py",
+      "id": "container_yolo_perception_update",
+      "license_notes": "Synthetic fixture with no third-party model weights",
+      "new_file": "data/raw/containers/yolo-perception/yolo-perception-layer-new.tar",
+      "new_sha256": "e669a57fb08d98364bfc4188a4259b2d14d83698302da7cd0dcc57f9bed99e1c",
+      "new_size_bytes": 20480,
+      "old_file": "data/raw/containers/yolo-perception/yolo-perception-layer-old.tar",
+      "old_sha256": "0e8b0687acf08d383867dafd22ba867fb3829e05656edef718005071fdffdca8",
+      "old_size_bytes": 20480,
+      "scenario": "containerized_yolo_perception_update",
+      "source": "Locally generated deterministic SmartOTA-Bench YOLO-style perception container fixture",
+      "tier": "containers"
+    }
+  ],
+  "version": 1
+}

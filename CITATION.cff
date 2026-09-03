@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: >-
+  If you use SmartOTA-Bench, please cite the software and the associated SEC
+  2026 paper.
+title: SmartOTA-Bench
+type: software
+authors:
+  - family-names: Bhattacharjee
+    given-names: Arpan
+  - family-names: Shi
+    given-names: Weisong
+version: 1.0.0
+date-released: 2026-09-03
+repository-code: https://github.com/arpanudel/SmartOTA-Bench
+url: https://github.com/arpanudel/SmartOTA-Bench
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: >-
+    SmartOTA-Bench: Replay-Correct and Deployment-Aware Benchmarking of OTA
+    Update Planning
+  authors:
+    - family-names: Bhattacharjee
+      given-names: Arpan
+    - family-names: Shi
+      given-names: Weisong
+  year: 2026

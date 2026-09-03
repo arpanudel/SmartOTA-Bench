@@ -1,0 +1,45 @@
+\begin{table}
+\caption{SmartOTA-Bench operation mix by dataset, domain, and policy.}
+\label{tab:smartota_operation_mix}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+dataset/domain & policy & runs & copy & delta & raw & backup & ckpt & verify & rollback & other \\
+\midrule
+smartota-alpine-expanded / os_rootfs & backup_safe_copy_delta & 24 & 0.000 & 0.006 & 0.496 & 0.498 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-expanded / os_rootfs & blockwise_bsdiff & 24 & 0.000 & 0.993 & 0.007 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-expanded / os_rootfs & copy_delta & 24 & 0.000 & 0.011 & 0.989 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-expanded / os_rootfs & copy_only & 24 & 0.000 & 0.000 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-expanded / os_rootfs & deployment_aware_greedy & 24 & 0.000 & 0.004 & 0.588 & 0.408 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-expanded / os_rootfs & full_replacement & 24 & 0.000 & 0.000 & 0.500 & 0.000 & 0.000 & 0.000 & 0.000 & 0.500 \\
+smartota-alpine-expanded / os_rootfs & rsync_rolling_hash & 24 & 0.000 & 0.000 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-expanded / os_rootfs & whole_file_bsdiff & 24 & 0.000 & 0.500 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.500 \\
+smartota-alpine-rootfs / os_rootfs & backup_safe_copy_delta & 24 & 0.002 & 0.492 & 0.009 & 0.498 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-rootfs / os_rootfs & blockwise_bsdiff & 24 & 0.003 & 0.990 & 0.006 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-rootfs / os_rootfs & copy_delta & 24 & 0.003 & 0.979 & 0.018 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-rootfs / os_rootfs & copy_only & 24 & 0.003 & 0.000 & 0.997 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-rootfs / os_rootfs & deployment_aware_greedy & 24 & 0.002 & 0.570 & 0.041 & 0.387 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-rootfs / os_rootfs & full_replacement & 24 & 0.000 & 0.000 & 0.500 & 0.000 & 0.000 & 0.000 & 0.000 & 0.500 \\
+smartota-alpine-rootfs / os_rootfs & rsync_rolling_hash & 24 & 0.003 & 0.000 & 0.997 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-alpine-rootfs / os_rootfs & whole_file_bsdiff & 24 & 0.000 & 0.500 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.500 \\
+smartota-automotive / autoware_style_av_stack & backup_safe_copy_delta & 36 & 0.031 & 0.281 & 0.250 & 0.438 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-automotive / autoware_style_av_stack & blockwise_bsdiff & 36 & 0.000 & 0.778 & 0.222 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-automotive / autoware_style_av_stack & copy_delta & 36 & 0.000 & 0.556 & 0.444 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-automotive / autoware_style_av_stack & copy_only & 36 & 0.000 & 0.000 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-automotive / autoware_style_av_stack & deployment_aware_greedy & 36 & 0.026 & 0.325 & 0.281 & 0.368 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-automotive / autoware_style_av_stack & full_replacement & 36 & 0.000 & 0.000 & 0.600 & 0.000 & 0.000 & 0.000 & 0.000 & 0.400 \\
+smartota-automotive / autoware_style_av_stack & rsync_rolling_hash & 36 & 0.000 & 0.000 & 1.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-automotive / autoware_style_av_stack & whole_file_bsdiff & 36 & 0.000 & 0.600 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.400 \\
+smartota-container-layers / container_av_perception & backup_safe_copy_delta & 60 & 0.440 & 0.044 & 0.183 & 0.333 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-container-layers / container_av_perception & blockwise_bsdiff & 60 & 0.433 & 0.498 & 0.069 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-container-layers / container_av_perception & copy_delta & 60 & 0.433 & 0.065 & 0.502 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-container-layers / container_av_perception & copy_only & 60 & 0.433 & 0.000 & 0.567 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-container-layers / container_av_perception & deployment_aware_greedy & 60 & 0.439 & 0.044 & 0.245 & 0.272 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-container-layers / container_av_perception & full_replacement & 60 & 0.000 & 0.000 & 0.556 & 0.000 & 0.000 & 0.000 & 0.000 & 0.444 \\
+smartota-container-layers / container_av_perception & rsync_rolling_hash & 60 & 0.433 & 0.000 & 0.567 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+smartota-container-layers / container_av_perception & whole_file_bsdiff & 60 & 0.000 & 0.556 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.444 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

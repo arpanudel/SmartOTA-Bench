@@ -1,0 +1,21 @@
+\begin{table}
+\caption{SmartOTA-Bench policy summary across enabled local datasets.}
+\label{tab:smartota_policy_summary}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrrrrrrrr}
+\toprule
+policy & runs & med net B & med runtime s & med RAM B & med storage B & rollback & replay & int fail & A/B runs & A/B valid & A/B rollback & A/B health & slot viol \\
+\midrule
+deployment_aware_greedy & 144 & 1339733.000 & 0.495 & 48759.500 & 1856264.500 & 0.917 & 1.000 & 0.042 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+backup_safe_copy_delta & 144 & 1339733.000 & 0.425 & 48759.500 & 2829232.000 & 1.000 & 1.000 & 0.042 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+copy_delta & 144 & 2342562.500 & 0.387 & 48759.500 & 1835546.500 & 0.250 & 1.000 & 0.285 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+copy_only & 144 & 2464069.000 & 0.021 & 16384.000 & 1858893.500 & 0.250 & 1.000 & 0.285 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+rsync_rolling_hash & 144 & 2464069.000 & 0.367 & 16384.000 & 1858893.500 & 0.250 & 1.000 & 0.285 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+blockwise_bsdiff & 144 & 2395960.500 & 0.358 & 49730.000 & 1851246.500 & 0.250 & 1.000 & 0.285 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+whole_file_bsdiff & 144 & 1097106.000 & 0.867 & 4151888.000 & 4840414.000 & 0.250 & 1.000 & 0.625 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+full_replacement & 144 & 4154284.000 & 0.028 & 1780280.000 & 7663759.000 & 0.250 & 1.000 & 0.625 & 108 & 0.944 & 1.000 & 0.944 & 0.056 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

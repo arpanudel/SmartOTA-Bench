@@ -1,0 +1,17 @@
+\begin{table}
+\caption{SmartOTA-Bench safety and efficiency tradeoff winners.}
+\label{tab:smartota_safety_tradeoff}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllrrrrrr}
+\toprule
+criterion & primary & ties & tie breaker & rollback & budget viol & int fail & replay & med net B & med runtime s \\
+\midrule
+safest_policy & backup_safe_copy_delta & backup_safe_copy_delta & none & 1.000 & 0.146 & 0.042 & 1.000 & 1339733.000 & 0.425 \\
+smallest_transfer_policy & whole_file_bsdiff & whole_file_bsdiff & none & 0.250 & 0.333 & 0.625 & 1.000 & 1097106.000 & 0.867 \\
+fastest_policy & copy_only & copy_only & none & 0.250 & 0.083 & 0.285 & 1.000 & 2464069.000 & 0.021 \\
+best_recovery_policy & backup_safe_copy_delta & backup_safe_copy_delta & none & 1.000 & 0.146 & 0.042 & 1.000 & 1339733.000 & 0.425 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

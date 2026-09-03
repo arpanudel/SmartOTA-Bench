@@ -1,0 +1,60 @@
+{
+  "name": "smartota-alpine-expanded",
+  "version": 1,
+  "base_dir": "../..",
+  "pairs": [
+    {
+      "id": "alpine_3_20_to_3_21_minirootfs_x86_64",
+      "enabled": true,
+      "domain": "os_rootfs",
+      "tier": "alpine-expanded",
+      "scenario": "Alpine minirootfs compressed release transition 3.20.0 to 3.21.0 for the small Linux real-artifact baseline",
+      "artifact_type": "compressed_rootfs_tar",
+      "compression_status": "compressed",
+      "compression_status_source": "release_artifact_tar_gz_suffix",
+      "old_file": "data/raw/alpine/alpine-minirootfs-3.20.0-x86_64.tar.gz",
+      "new_file": "data/raw/alpine/alpine-minirootfs-3.21.0-x86_64.tar.gz",
+      "old_url": "https://dl-cdn.alpinelinux.org/alpine/v3.20/releases/x86_64/alpine-minirootfs-3.20.0-x86_64.tar.gz",
+      "new_url": "https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-minirootfs-3.21.0-x86_64.tar.gz",
+      "old_size_bytes": 3487168,
+      "new_size_bytes": 3509360,
+      "old_sha256": "602efda518516787c716320bd46a3f50e83a74bb749e55483c2f4a9c9f8b9a38",
+      "new_sha256": "55ea3e5a7c2c35e6268c5dcbb8e45a9cd5b0e372e7b4e798499a526834f7ed90",
+      "block_size_bytes": 65536,
+      "source": "Pinned Alpine Linux x86_64 minirootfs release artifacts: v3.20 alpine-minirootfs-3.20.0 and v3.21 alpine-minirootfs-3.21.0 URLs recorded in manifest",
+      "license_notes": "Alpine Linux minirootfs distribution artifacts; package-level licenses and Alpine redistribution terms should be reviewed before publishing mirrored artifacts"
+    },
+    {
+      "id": "alpine_3_21_point_release_minirootfs_x86_64",
+      "enabled": false,
+      "domain": "os_rootfs",
+      "tier": "alpine-expanded",
+      "scenario": "same major Alpine branch point-release update for smaller package churn",
+      "artifact_type": "compressed_rootfs_tar",
+      "compression_status": "compressed",
+      "compression_status_source": "release_artifact_tar_gz_suffix",
+      "old_file": "data/raw/alpine/alpine-minirootfs-3.21.0-x86_64.tar.gz",
+      "new_file": "data/raw/alpine/alpine-minirootfs-3.21-point-x86_64.tar.gz",
+      "block_size_bytes": 65536,
+      "source": "Alpine Linux minirootfs release artifacts; select a pinned 3.21.x point release before registration",
+      "license_notes": "verify upstream Alpine redistribution terms before publication",
+      "manual_download": true
+    },
+    {
+      "id": "alpine_apk_cache_security_update_x86_64",
+      "enabled": false,
+      "domain": "os_packages",
+      "tier": "alpine-expanded",
+      "scenario": "package repository cache update with repeated APK metadata and compressed package payloads",
+      "artifact_type": "package_cache_tar",
+      "compression_status": "mixed",
+      "compression_status_source": "uncompressed_cache_tar_with_compressed_apk_payloads",
+      "old_file": "data/raw/alpine/apk-cache/security-old.tar",
+      "new_file": "data/raw/alpine/apk-cache/security-new.tar",
+      "block_size_bytes": 65536,
+      "source": "Reproducible local APK cache snapshot built from pinned Alpine repositories",
+      "license_notes": "record package-level license notes during registration",
+      "manual_download": true
+    }
+  ]
+}

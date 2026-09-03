@@ -1,0 +1,80 @@
+{
+  "configs": [
+    {
+      "name": "unconstrained_default",
+      "config": {
+        "bandwidth_bytes_per_s": 100000000.0,
+        "flash_write_bytes_per_s": 100000000.0,
+        "patch_apply_bytes_per_s": 50000000.0,
+        "storage_budget_bytes": 1073741824,
+        "ram_budget_bytes": 268435456,
+        "require_backup_for_overwrite": false,
+        "checkpoint_interval_ops": null,
+        "staging_strategy": "streaming",
+        "enable_ab_slots": false,
+        "slot_capacity_bytes": null,
+        "max_boot_attempts": 1,
+        "reboot_downtime_seconds": 0.0,
+        "health_check_mode": "always_pass",
+        "require_inactive_slot_install": true
+      }
+    },
+    {
+      "name": "realistic",
+      "config": {
+        "bandwidth_bytes_per_s": 2000000.0,
+        "flash_write_bytes_per_s": 20000000.0,
+        "patch_apply_bytes_per_s": 10000000.0,
+        "storage_budget_bytes": 25165824,
+        "ram_budget_bytes": 8388608,
+        "require_backup_for_overwrite": true,
+        "checkpoint_interval_ops": 25,
+        "staging_strategy": "full_package",
+        "enable_ab_slots": true,
+        "slot_capacity_bytes": 16777216,
+        "max_boot_attempts": 2,
+        "reboot_downtime_seconds": 30.0,
+        "health_check_mode": "always_pass",
+        "require_inactive_slot_install": true
+      }
+    },
+    {
+      "name": "constrained",
+      "config": {
+        "bandwidth_bytes_per_s": 500000.0,
+        "flash_write_bytes_per_s": 5000000.0,
+        "patch_apply_bytes_per_s": 2000000.0,
+        "storage_budget_bytes": 12582912,
+        "ram_budget_bytes": 524288,
+        "require_backup_for_overwrite": true,
+        "checkpoint_interval_ops": 10,
+        "staging_strategy": "streaming",
+        "enable_ab_slots": true,
+        "slot_capacity_bytes": 8388608,
+        "max_boot_attempts": 2,
+        "reboot_downtime_seconds": 45.0,
+        "health_check_mode": "always_pass",
+        "require_inactive_slot_install": true
+      }
+    },
+    {
+      "name": "severe_edge_device",
+      "config": {
+        "bandwidth_bytes_per_s": 128000.0,
+        "flash_write_bytes_per_s": 1000000.0,
+        "patch_apply_bytes_per_s": 512000.0,
+        "storage_budget_bytes": 6291456,
+        "ram_budget_bytes": 131072,
+        "require_backup_for_overwrite": true,
+        "checkpoint_interval_ops": 5,
+        "staging_strategy": "streaming",
+        "enable_ab_slots": true,
+        "slot_capacity_bytes": 4194304,
+        "max_boot_attempts": 3,
+        "reboot_downtime_seconds": 90.0,
+        "health_check_mode": "always_pass",
+        "require_inactive_slot_install": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ota_environment_dataset_manifest",
+  "version": 1,
+  "base_dir": "..",
+  "pairs": [
+    {
+      "id": "synthetic_growing_example",
+      "enabled": false,
+      "domain": "synthetic",
+      "tier": "smoke",
+      "scenario": "example generated update pair with appended target blocks",
+      "old_file": "data/processed/synthetic/growing/old.bin",
+      "new_file": "data/processed/synthetic/growing/new.bin",
+      "old_size_bytes": 12288,
+      "new_size_bytes": 16384,
+      "old_sha256": "5843f08c38c19a49c600c0dd3cd4aa03d263285a102c333cff88af8a555e737a",
+      "new_sha256": "3060362aacb375cb65e72ea6fdb1e235bde34e5ec891d9c5234381214ced3ef4",
+      "block_size_bytes": 1024,
+      "source": "Run scripts/generate_synthetic_datasets.py with seed 20260501",
+      "license_notes": "generated test data; no third-party artifacts"
+    },
+    {
+      "id": "alpine_3_20_to_3_21_minirootfs_example",
+      "enabled": false,
+      "domain": "os_rootfs",
+      "tier": "alpine-expanded",
+      "scenario": "Alpine minirootfs release transition; register local artifacts before enabling",
+      "old_file": "data/raw/alpine/alpine-minirootfs-3.20.0-x86_64.tar.gz",
+      "new_file": "data/raw/alpine/alpine-minirootfs-3.21.0-x86_64.tar.gz",
+      "old_size_bytes": 3487168,
+      "new_size_bytes": 3509360,
+      "old_sha256": "602efda518516787c716320bd46a3f50e83a74bb749e55483c2f4a9c9f8b9a38",
+      "new_sha256": "55ea3e5a7c2c35e6268c5dcbb8e45a9cd5b0e372e7b4e798499a526834f7ed90",
+      "block_size_bytes": 65536,
+      "source": "Alpine Linux minirootfs release artifacts",
+      "license_notes": "verify upstream Alpine redistribution terms before publication"
+    }
+  ]
+}

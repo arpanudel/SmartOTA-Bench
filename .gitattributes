@@ -1,0 +1,8 @@
+# Historical generated evidence is preserved byte-for-byte; its formatting is
+# not source whitespace and should not fail release metadata checks.
+/artifacts/** -whitespace
+/paper/plots/** -whitespace
+/paper/tables/*.csv -whitespace
+/paper/tables/*.tex -whitespace
+/env/ota_env.py -whitespace
+/deployment/__init__.py -whitespace

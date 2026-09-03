@@ -1,0 +1,71 @@
+{
+  "name": "smartota-av-software",
+  "version": 1,
+  "base_dir": "../..",
+  "pairs": [
+    {
+      "id": "perception_model_bundle_refresh",
+      "enabled": false,
+      "domain": "av_software",
+      "tier": "av-software",
+      "scenario": "perception model bundle update with large tensor files and small config changes",
+      "artifact_type": "model_bundle_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "registration_recipe_tar_bundle",
+      "old_file": "data/raw/av-software/models/perception-models-old.tar",
+      "new_file": "data/raw/av-software/models/perception-models-new.tar",
+      "block_size_bytes": 131072,
+      "source": "Redistributable model package, generated toy model bundle, or internal artifact registered locally",
+      "license_notes": "record model license and redistribution restrictions during registration",
+      "manual_download": true
+    },
+    {
+      "id": "hd_map_tile_bundle_refresh",
+      "enabled": false,
+      "domain": "av_software",
+      "tier": "av-software",
+      "scenario": "HD map tile update with reordered, appended, and deleted binary map segments",
+      "artifact_type": "map_bundle_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "registration_recipe_tar_bundle",
+      "old_file": "data/raw/av-software/maps/hd-map-old.tar",
+      "new_file": "data/raw/av-software/maps/hd-map-new.tar",
+      "block_size_bytes": 131072,
+      "source": "Open map bundle or generated map-like binary tiles with documented provenance",
+      "license_notes": "record map license and attribution requirements during registration",
+      "manual_download": true
+    },
+    {
+      "id": "planning_behavior_config_refresh",
+      "enabled": false,
+      "domain": "av_software",
+      "tier": "av-software",
+      "scenario": "planner behavior update dominated by small config files and validation metadata",
+      "artifact_type": "config_bundle_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "registration_recipe_tar_bundle",
+      "old_file": "data/raw/av-software/planning/planning-config-old.tar",
+      "new_file": "data/raw/av-software/planning/planning-config-new.tar",
+      "block_size_bytes": 16384,
+      "source": "Generated planner parameter fixture or redistributable planning stack config bundle",
+      "license_notes": "use generated or redistributable configuration data",
+      "manual_registration": true
+    },
+    {
+      "id": "sensor_driver_firmware_bundle",
+      "enabled": false,
+      "domain": "av_software",
+      "tier": "av-software",
+      "scenario": "sensor driver and firmware-style payload update with compressed-like binary regions",
+      "artifact_type": "firmware_bundle_tar",
+      "compression_status": "mixed",
+      "compression_status_source": "registration_recipe_firmware_like_bundle",
+      "old_file": "data/raw/av-software/drivers/sensor-driver-old.tar",
+      "new_file": "data/raw/av-software/drivers/sensor-driver-new.tar",
+      "block_size_bytes": 65536,
+      "source": "Redistributable driver package or generated firmware-like fixture",
+      "license_notes": "record vendor redistribution terms or synthetic generation recipe",
+      "manual_download": true
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "name": "smartota-linux-images",
+  "version": 1,
+  "base_dir": "../..",
+  "pairs": [
+    {
+      "id": "debian_bookworm_cloud_image_point_update_amd64",
+      "enabled": false,
+      "domain": "os_image",
+      "tier": "linux-images",
+      "scenario": "Debian cloud image point update with filesystem metadata and package churn",
+      "artifact_type": "qcow2_image",
+      "compression_status_source": "record_exact_image_format_during_registration",
+      "old_file": "data/raw/linux-images/debian/bookworm-cloud-old.qcow2",
+      "new_file": "data/raw/linux-images/debian/bookworm-cloud-new.qcow2",
+      "block_size_bytes": 131072,
+      "source": "Pinned Debian cloud images or reproducible local conversion from downloaded images",
+      "license_notes": "record Debian image license and mirror provenance during registration",
+      "manual_download": true
+    },
+    {
+      "id": "ubuntu_lts_cloud_image_security_update_amd64",
+      "enabled": false,
+      "domain": "os_image",
+      "tier": "linux-images",
+      "scenario": "Ubuntu LTS cloud image refresh with security updates and compressed filesystem regions",
+      "artifact_type": "disk_image",
+      "compression_status_source": "record_exact_image_format_during_registration",
+      "old_file": "data/raw/linux-images/ubuntu/lts-cloud-old.img",
+      "new_file": "data/raw/linux-images/ubuntu/lts-cloud-new.img",
+      "block_size_bytes": 131072,
+      "source": "Pinned Ubuntu cloud image release artifacts",
+      "license_notes": "record Ubuntu image license and mirror provenance during registration",
+      "manual_download": true
+    },
+    {
+      "id": "yocto_core_image_minimal_qemuarm64",
+      "enabled": false,
+      "domain": "embedded_linux",
+      "tier": "linux-images",
+      "scenario": "Yocto/OpenEmbedded minimal image rebuild across metadata revisions",
+      "artifact_type": "wic_image",
+      "compression_status_source": "record_exact_image_format_during_registration",
+      "old_file": "data/raw/linux-images/yocto/core-image-minimal-old.wic",
+      "new_file": "data/raw/linux-images/yocto/core-image-minimal-new.wic",
+      "block_size_bytes": 65536,
+      "source": "Reproducible Yocto build output with pinned layer revisions",
+      "license_notes": "record layer revisions and generated image license manifest during registration",
+      "manual_build": true
+    },
+    {
+      "id": "raspberry_pi_os_lite_image_update_arm64",
+      "enabled": false,
+      "domain": "edge_iot",
+      "tier": "linux-images",
+      "scenario": "edge gateway style Linux image update with boot and root filesystem partitions",
+      "artifact_type": "disk_image",
+      "compression_status_source": "record_exact_image_format_during_registration",
+      "old_file": "data/raw/linux-images/raspios/raspios-lite-old.img",
+      "new_file": "data/raw/linux-images/raspios/raspios-lite-new.img",
+      "block_size_bytes": 131072,
+      "source": "Pinned Raspberry Pi OS Lite image artifacts or reproducible local image snapshots",
+      "license_notes": "record image license and package manifest during registration",
+      "manual_download": true
+    }
+  ]
+}

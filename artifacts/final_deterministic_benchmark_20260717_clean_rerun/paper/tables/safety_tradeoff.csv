@@ -1,0 +1,5 @@
+criterion,winning_policy,tied_policies,num_tied_policies,tie_breaker,selection_rule,rollback_ready_rate,budget_violation_rate,interruption_recovery_failure_rate,replay_validity_rate,median_transfer_size_bytes,median_runtime_s
+safest_policy,backup_safe_copy_delta,backup_safe_copy_delta,1,none,"highest rollback_ready_rate, then lowest budget_violation_rate, lowest interruption_recovery_failure_rate, highest replay_validity_rate",1.0,0.14583333333333334,0.041666666666666664,1.0,1339733.0,0.42505350000000003
+smallest_transfer_policy,whole_file_bsdiff,whole_file_bsdiff,1,none,lowest median_transfer_size_bytes among replay-valid runs,0.25,0.3333333333333333,0.625,1.0,1097106.0,0.8665955000000001
+fastest_policy,copy_only,copy_only,1,none,lowest median_runtime_s among replay-valid runs,0.25,0.08333333333333333,0.2847222222222222,1.0,2464069.0,0.021481499999999997
+best_recovery_policy,backup_safe_copy_delta,backup_safe_copy_delta,1,none,"lowest interruption_recovery_failure_rate, then highest rollback_ready_rate",1.0,0.14583333333333334,0.041666666666666664,1.0,1339733.0,0.42505350000000003

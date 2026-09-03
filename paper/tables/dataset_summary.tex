@@ -1,0 +1,25 @@
+\begin{table}
+\caption{SmartOTA-Bench dataset summary for the latest benchmark run.}
+\label{tab:smartota_dataset_summary}
+\scriptsize
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrrrllrl}
+\toprule
+dataset/domain & artifact & pairs & old med B & new med B & compression & source & block B & scenario \\
+\midrule
+smartota-alpine-expanded / os_rootfs & compressed_rootfs_tar & 1 & 3487168.000 & 3509360.000 & compressed & release_artifact_tar_gz_suffix & 16384 & Alpine minirootfs compressed release transition 3.20.0 to 3.21.0 for the small Linux real-artifact baseline \\
+smartota-alpine-expanded / os_rootfs & compressed_rootfs_tar & 1 & 3487168.000 & 3509360.000 & compressed & release_artifact_tar_gz_suffix & 65536 & Alpine minirootfs compressed release transition 3.20.0 to 3.21.0 for the small Linux real-artifact baseline \\
+smartota-alpine-rootfs / os_rootfs & rootfs_tar & 1 & 8079360.000 & 8130560.000 & uncompressed & derivation_normalized_uncompressed_tar & 16384 & Normalized uncompressed Alpine rootfs tar derived from minirootfs 3.20.0 to 3.21.0 for rootfs-level OTA planning \\
+smartota-alpine-rootfs / os_rootfs & rootfs_tar & 1 & 8079360.000 & 8130560.000 & uncompressed & derivation_normalized_uncompressed_tar & 65536 & Normalized uncompressed Alpine rootfs tar derived from minirootfs 3.20.0 to 3.21.0 for rootfs-level OTA planning \\
+smartota-automotive / autoware_style_av_stack & autoware_module_tar & 1 & 40960.000 & 51200.000 & uncompressed & deterministic_tar_derivation & 4096 & autoware_style_perception_module_update \\
+smartota-automotive / autoware_style_av_stack & autoware_module_tar & 1 & 40960.000 & 51200.000 & uncompressed & deterministic_tar_derivation & 16384 & autoware_style_perception_module_update \\
+smartota-automotive / autoware_style_av_stack & autoware_module_tar & 1 & 40960.000 & 51200.000 & uncompressed & deterministic_tar_derivation & 65536 & autoware_style_perception_module_update \\
+smartota-container-layers / container_av_perception & perception_container_tar & 1 & 20480.000 & 20480.000 & uncompressed & deterministic_tar_derivation & 4096 & containerized_yolo_perception_update \\
+smartota-container-layers / container_av_perception & perception_container_tar & 1 & 3430400.000 & 3696640.000 & uncompressed & deterministic_tar_derivation & 16384 & containerized_yolo_perception_multiblock_update \\
+smartota-container-layers / container_av_perception & perception_container_tar & 1 & 20480.000 & 20480.000 & uncompressed & deterministic_tar_derivation & 16384 & containerized_yolo_perception_update \\
+smartota-container-layers / container_av_perception & perception_container_tar & 1 & 3430400.000 & 3696640.000 & uncompressed & deterministic_tar_derivation & 65536 & containerized_yolo_perception_multiblock_update \\
+smartota-container-layers / container_av_perception & perception_container_tar & 1 & 20480.000 & 20480.000 & uncompressed & deterministic_tar_derivation & 65536 & containerized_yolo_perception_update \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

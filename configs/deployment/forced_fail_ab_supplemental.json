@@ -1,0 +1,23 @@
+{
+  "configs": [
+    {
+      "name": "ab_forced_fail_inactive_slot",
+      "config": {
+        "bandwidth_bytes_per_s": 2000000.0,
+        "flash_write_bytes_per_s": 20000000.0,
+        "patch_apply_bytes_per_s": 10000000.0,
+        "storage_budget_bytes": 25165824,
+        "ram_budget_bytes": 8388608,
+        "require_backup_for_overwrite": true,
+        "checkpoint_interval_ops": 10,
+        "staging_strategy": "streaming",
+        "enable_ab_slots": true,
+        "slot_capacity_bytes": 16777216,
+        "max_boot_attempts": 2,
+        "reboot_downtime_seconds": 30.0,
+        "health_check_mode": "forced_fail",
+        "require_inactive_slot_install": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Deterministic benchmark, test, audit, and report-generation environment.
+# These are the versions used for release-time validation on Python 3.12.7.
+numpy==1.26.4
+gym==0.26.2
+bsdiff4==1.2.6
+matplotlib==3.10.9
+pandas==3.0.3

@@ -1,0 +1,71 @@
+{
+  "name": "smartota-debian-ubuntu-updates",
+  "version": 1,
+  "base_dir": "../..",
+  "pairs": [
+    {
+      "id": "debian_bookworm_package_cache_security_update_amd64",
+      "enabled": false,
+      "domain": "os_packages",
+      "tier": "debian-ubuntu",
+      "scenario": "Debian package repository/cache snapshot before and after a pinned security update set",
+      "artifact_type": "package_cache_tar",
+      "compression_status": "mixed",
+      "compression_status_source": "package_cache_tar_may_contain_compressed_packages",
+      "old_file": "data/raw/debian-ubuntu/debian/bookworm-package-cache-old.tar",
+      "new_file": "data/raw/debian-ubuntu/debian/bookworm-package-cache-new.tar",
+      "block_size_bytes": 65536,
+      "source": "Build from pinned Debian bookworm apt sources with a recorded package list and snapshot timestamp",
+      "license_notes": "Record Debian mirror, package list, and package-level license metadata during registration",
+      "manual_build": true
+    },
+    {
+      "id": "debian_bookworm_rootfs_security_update_amd64",
+      "enabled": false,
+      "domain": "os_rootfs",
+      "tier": "debian-ubuntu",
+      "scenario": "Debian rootfs tar before and after applying a pinned apt security update transaction",
+      "artifact_type": "rootfs_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "registration_recipe_rootfs_tar",
+      "old_file": "data/raw/debian-ubuntu/debian/bookworm-rootfs-old.tar",
+      "new_file": "data/raw/debian-ubuntu/debian/bookworm-rootfs-new.tar",
+      "block_size_bytes": 65536,
+      "source": "Create with debootstrap/mmdebstrap using pinned snapshot.debian.org timestamps, then apply recorded apt updates",
+      "license_notes": "Record Debian base system and package-level license metadata during registration",
+      "manual_build": true
+    },
+    {
+      "id": "ubuntu_22_04_rootfs_security_refresh_amd64",
+      "enabled": false,
+      "domain": "os_rootfs",
+      "tier": "debian-ubuntu",
+      "scenario": "Ubuntu 22.04 rootfs tar security refresh with apt package churn and filesystem metadata changes",
+      "artifact_type": "rootfs_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "registration_recipe_rootfs_tar",
+      "old_file": "data/raw/debian-ubuntu/ubuntu/22.04-rootfs-old.tar",
+      "new_file": "data/raw/debian-ubuntu/ubuntu/22.04-rootfs-new.tar",
+      "block_size_bytes": 65536,
+      "source": "Create with ubuntu-base or mmdebstrap against pinned Ubuntu archive snapshots, then apply recorded security updates",
+      "license_notes": "Record Ubuntu archive, package manifest, and redistribution notes during registration",
+      "manual_build": true
+    },
+    {
+      "id": "yocto_core_image_minimal_packagefeed_update_qemuarm64",
+      "enabled": false,
+      "domain": "embedded_linux",
+      "tier": "debian-ubuntu",
+      "scenario": "Yocto-style rootfs/package-feed update across pinned layer revisions",
+      "artifact_type": "rootfs_tar",
+      "compression_status": "uncompressed",
+      "compression_status_source": "registration_recipe_rootfs_tar",
+      "old_file": "data/raw/debian-ubuntu/yocto/core-image-minimal-rootfs-old.tar",
+      "new_file": "data/raw/debian-ubuntu/yocto/core-image-minimal-rootfs-new.tar",
+      "block_size_bytes": 65536,
+      "source": "Build from pinned OpenEmbedded/Yocto layer revisions and preserve image license manifest",
+      "license_notes": "Record layer SHAs and generated license manifest during registration",
+      "manual_build": true
+    }
+  ]
+}
